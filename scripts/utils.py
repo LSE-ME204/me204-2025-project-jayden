@@ -19,3 +19,64 @@ indicators = {
     'PV.EST': 'Political_Stability',
     'VA.EST': 'Voice_and_Accountability'
 }
+
+
+
+# Defined the mapping of the columns that we need to pull from the World Happiness CSV's
+year_column_map = {
+    '2018': {
+        'Rank': 'Overall rank',
+        'Country': 'Country or region',
+        'Happiness Score': 'Score',
+        'Social support': 'Social support',
+        'Freedom to make life choices': 'Freedom to make life choices',
+        'Generosity': 'Generosity',
+        'Perceptions of corruption': 'Perceptions of corruption',
+    },
+
+    '2019': {
+        'Rank': 'Overall rank',
+        'Country': 'Country or region',
+        'Happiness Score': 'Score',
+        'Social support': 'Social support',
+        'Freedom to make life choices': 'Freedom to make life choices',
+        'Generosity': 'Generosity',
+        'Perceptions of corruption': 'Perceptions of corruption',
+    },
+    '2020': {
+        'Rank': None,  # no explicit rank column, create from index
+        'Country': 'Country name',
+        'Happiness Score': 'Ladder score',
+        'Social support': 'Social support',
+        'Freedom to make life choices': 'Freedom to make life choices',
+        'Generosity': 'Generosity',
+        'Perceptions of corruption': 'Perceptions of corruption',
+    },
+    '2021': {
+        'Rank': None,  # no explicit rank column, create from index
+        'Country': 'Country name',
+        'Happiness Score': 'Ladder score',
+        'Social support': 'Social support',
+        'Freedom to make life choices': 'Freedom to make life choices',
+        'Generosity': 'Generosity',
+        'Perceptions of corruption': 'Perceptions of corruption',
+    },
+    '2022': {
+        'Rank': 'RANK',
+        'Country': 'Country',
+        'Happiness Score': 'Happiness score',
+        'Social support': 'Explained by: Social support',
+        'Freedom to make life choices': 'Explained by: Freedom to make life choices',
+        'Generosity': 'Explained by: Generosity',
+        'Perceptions of corruption': 'Explained by: Perceptions of corruption',
+    },
+    '2023': {
+        'Rank': None,  # no explicit rank column, create from index
+        'Country': 'Country name',
+        'Happiness Score': 'Ladder score',
+        'Social support': 'Social support',
+        'Freedom to make life choices': 'Freedom to make life choices',
+        'Generosity': 'Generosity',
+        'Perceptions of corruption': 'Perceptions of corruption',
+    }
+}

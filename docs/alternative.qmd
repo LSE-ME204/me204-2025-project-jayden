@@ -1,14 +1,97 @@
 ---
-title: "Quarto Basics"
-format:
-    html:
-        code-fold: true
-        self-contained: true
-theme: cosmo
-jupyter: python3
+title: "Why Is the U.S. So Unhappy?"
+author: "Jayden"
+format: html
+toc: true
+toc-title: "On this page"
+toc-location: left
+number-sections: true
+page-layout: full
+filters: 
+  - lightbox
 ---
 
-# First Header
-## Sub Header
+# Overview
 
-Welcome to Quarto
+This project, completed for [ME204](https://lse-dsi.github.io/ME204/2025/), explores a simple but important question:  
+**Why isn't the United States one of the happiest countries in the world — despite being one of the richest?**
+
+Using seven years of global survey data from the World Happiness Reports, along with national indicators from the World Bank API, I built a complete data pipeline to explore what really explains national happiness. The U.S. consistently underperforms in global happiness rankings — and this project investigates why.
+
+::: {.callout-note}
+**Key findings:**
+- The U.S. ranks far below the happiest nations, and its happiness gap is growing.
+- Good governance — not GDP — is the strongest predictor of happiness.
+- Global happiness is remarkably stable — and tied to institutional strength.
+:::
+
+# Methodology
+
+To investigate this question, I combined two global data sources:
+
+- The **World Happiness Reports** (2018–2024), which rank countries based on average self-reported life satisfaction.
+- A selected set of **World Bank indicators**, including governance scores, GDP per capita, life expectancy, and more.
+
+I focused on six countries: the U.S. and the five top-ranking countries in the 2024 report (Finland, Denmark, Iceland, Sweden, and the Netherlands). These countries appeared consistently across all seven years of available data.
+
+The full data pipeline — including automated API pulls, cleaning, and database integration — is shown below:
+
+![](./figures/data-flow.png)
+
+# Findings
+
+## 1. The U.S. Ranks Low in Happiness — and It’s Falling Further
+
+Despite its global economic strength, the U.S. consistently ranks **below** the happiest countries. In 2024, it placed **23rd**, far behind countries like Finland and Denmark — despite having one of the highest GDP per capita values.
+
+![](./figures/happiness_over_time.svg)
+
+This gap isn’t shrinking. If anything, it’s growing: while Nordic countries maintain or improve happiness, the U.S. has seen modest declines.
+
+---
+
+## 2. Governance Is the Strongest Predictor of Happiness
+
+To explore what really predicts happiness, I calculated the **correlation between World Bank indicators and average national happiness scores**.
+
+![](./figures/correlation_with_happiness.svg)
+
+The clearest takeaway? **Governance matters most**.
+
+Top positive correlations:
+- `Rule of Law` (ρ = 0.93)
+- `Voice and Accountability` (ρ = 0.87)
+- `Control of Corruption` (ρ = 0.83)
+- `Government Effectiveness` (ρ = 0.77)
+- `Political Stability` (ρ = 0.70)
+
+By contrast:
+- `GDP per Capita`: **ρ = -0.44**
+- `Health Expenditure % GDP`: **ρ = -0.88**
+- `Social Support`: barely correlated
+
+These results suggest that happiness is not about how much wealth a country produces — but about how well it is governed.
+
+---
+
+## 3. Global Happiness Is Resilient — Governance May Explain Why
+
+Between 2018 and 2024, global happiness stayed **remarkably stable** — despite events like the COVID-19 pandemic.
+
+![](./figures/governance_vs_happiness.svg)
+
+Countries with strong institutions — such as rule of law, political stability, and effective governance — appear better equipped to sustain happiness even during crisis. Economic volatility doesn’t necessarily reduce well-being if institutional trust remains high.
+
+# Conclusion
+
+So, why is the U.S. unhappy?
+
+It's not the economy. It’s **the quality of governance**. The happiest countries aren't the richest — they’re the ones where people trust their institutions, feel secure, and experience political stability and accountability.
+
+This project shows that using public data and open tools, we can reveal insights that challenge assumptions. If America wants to be happier, the path may not be more GDP — but better governance.
+
+---
+
+```{.note}
+Want to dive deeper into the data and code?  
+See the full repository and analysis notebooks in the navigation panel.

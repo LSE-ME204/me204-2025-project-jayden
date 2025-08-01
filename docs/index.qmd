@@ -129,7 +129,7 @@ These countries consistently appeared in all seven years of data and offer a con
 
 To obtain the [World Bank indicators](https://datahelpdesk.worldbank.org/knowledgebase/topics/125589), I used the World Bank API to fetch up-to-date economic data for each country from 2018-2024. This automated data pull ensured the data is current and reliable allowing me to collect many indicators across multiple years without manual download or entry.
 
-I downloaded the [World Happiness Index Data](https://www.worldhappiness.report/data-sharing/) directly from the website via CSV's from 2020-2024. The data from 2018 and 2019 were downloaded from Kaggle, as it was not offered for download on the World Happiness Report Data Sharing site. However, to ensure validity, I cross referenced and checked every number to match up to the rankings both years on the [World Happiness Report rankings/data](https://data.worldhappiness.report/table), and they did, so I downloaded the csv's for [2018](https://www.kaggle.com/datasets/njlow1202/world-happiness-report-data-2018) and [2019](https://www.kaggle.com/datasets/anitaannah/world-happiness-report-2019).
+I downloaded the [World Happiness Index Data](https://www.worldhappiness.report/data-sharing/) directly from the website via csv's from 2020-2024. The data from 2018 and 2019 were downloaded from Kaggle, as it was not offered for download on the World Happiness Report Data Sharing site. However, to ensure validity, I cross referenced and checked every value to match up to the rankings both years on the [World Happiness Report rankings/data](https://data.worldhappiness.report/table), and they did, so I downloaded the csv's for [2018](https://www.kaggle.com/datasets/njlow1202/world-happiness-report-data-2018) and [2019](https://www.kaggle.com/datasets/anitaannah/world-happiness-report-2019).
 
 I then loaded all this data into a clean, relational SQLite database, making it easy to query and merge across sources.
 
@@ -171,7 +171,7 @@ The U.S. underperforms on these governance metrics relative to the happiest coun
 
 ## Where America Falls Behind: Governance and Well-Being
 
-To explore this further, use this interactive chart that lets you compare the average from 2018-2023 of happiness scores against any indicator score in the dataset to compare the United States to the happiest countries. You can switch the dropdown to governance metrics like Rule of Law or Voice and Accountability, and you’ll see a clear upward trend. Switch to economic metrics like GDP or Health Expenditure, and the pattern often disappears or reverses.
+To explore this further, use this interactive chart that lets you compare the average from 2018-2023 of happiness scores against any indicator score in the dataset to compare the United States to the happiest countries. You can switch the dropdown to governance metrics like Rule of Law or Voice and Accountability, and you’ll see a clear trend. Switch to economic metrics like GDP or Health Expenditure, and the pattern often disappears or reverses.
 
 <iframe src="./figures/interactive_happiness_scatter.html" width="100%" height="620" style="border:none;"></iframe>
 
@@ -201,10 +201,8 @@ It may not be about making, spending, and having money. Happiness could pertain 
 So to answer the original question:
 Why the U.S. far from the happiest, and can economic indicators explain this?
 
-It may not fully be about national income or spending. It could very well be about **governance** according to this data. The happiest countries in the world aren’t just economically successful, but they’re **well-governed, politically stable, and trusted by their citizens**.
+It may not fully be about income or spending. It could very well be about **governance** according to this data. The happiest countries in the world aren’t just economically successful, but they’re **well-governed, politically stable, and trusted by their citizens**.
 
 If the U.S. wants to climb the happiness rankings, having a great GDP shouldn't just be the main focus. It will need to rebuild **public trust, institutional accountability, and effective governance**. The data displays how happiness could depend less on how much a country earns, and more on how fairly and effectively it is run.
 
 This project shows how public datasets, when combined and analyzed thoughtfully, can reveal the deeper structures behind society's well-being.
-
----

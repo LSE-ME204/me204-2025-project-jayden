@@ -28,16 +28,13 @@ This project, which I completed for [ME204](https://lse-dsi.github.io/ME204/2025
 
 Using seven years of global survey data from the World Happiness Reports, and socio-economic indicators from the World Bank API, I built a data pipeline to uncover what really explains national happiness. The U.S. consistently underperforms in global happiness rankings, and this project investigates why.
 
----
 
 ## What you will find in this website
 
 - [The U.S. Lags in Happiness, Despite Its Wealth](#the-u.s.-lags-in-happiness-despite-its-wealth)  
-- [Governance Could Predict Happiness Instead of GDP](#what-moves-happiness-a-data-driven-exploration)
-- [The U.S. Governance Gap May Explain the Gap in Happiness](#where-america-falls-behind-governance-and-well-being)
+- [What Moves Happiness? A Data-Driven Exploration](#what-moves-happiness-a-data-driven-exploration)
+- [Where America Falls Behind: Governance and Well-Being](#where-america-falls-behind-governance-and-well-being)
 
-
----
 
 ## Methodology & Justification
 
@@ -127,7 +124,6 @@ I focused on six countries: the United States, and the five highest-ranking coun
 
 These countries consistently appeared in all seven years of data and offer a contrast in policy and institutional design to the United States of America. They can offer reasons as to why the U.S. lags behind in happiness.
 
----
 
 ## Data Collection and Processing
 
@@ -143,7 +139,6 @@ The diagram below shows the pipeline I built to collect, process, and analyse th
 
 ![](./figures/pipeline_flow.svg){width=80%}
 
----
 
 ## The U.S. Lags in Happiness, Despite Its Wealth
 
@@ -153,8 +148,6 @@ Despite its high GDP, the U.S. placed **24th in 2024** in happiness, far behind 
 
 More importantly, the **gap is growing**. The happiest countries continue to sustain or increase their well-being, while the U.S. has trended downward in the rankings in the past few years.
 Why is this occurring?
-
----
 
 ## What Moves Happiness? A Data-Driven Exploration
 
@@ -202,7 +195,6 @@ Could weak governance be holding back U.S. happiness?
 The pattern was clear across all four plots. The happiest countries consistently cluster in the upper right, with high governance quality AND high happiness. The U.S., marked in red, sits noticeably lower on both dimensions every time.
 It may not be about making, spending, and having money. Happiness could pertain to whether people trust their institutions, feel like the system is fair, and believe their government actually works for them.
 
----
 
 ## Conclusion
 

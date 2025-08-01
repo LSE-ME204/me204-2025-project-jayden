@@ -80,3 +80,48 @@ year_column_map = {
         'Perceptions of corruption': 'Perceptions of corruption',
     }
 }
+
+
+import sqlite3
+import pandas as pd
+
+def load_joined_world_bank_happiness(db_path):
+    
+    # Loads and joins World Bank and Happiness datasets from a SQLite database.
+
+    # - Connected to the SQLite database containing both datasets
+    # - Joined the World Bank and Happiness datasets on Country and Year
+    # - Selected all columns from World Bank plus key happiness metrics
+    # - Returned the cleaned, merged DataFrame
+
+    # Connected to the SQLite database containing both datasets
+    conn = sqlite3.connect(db_path)
+
+    # Joined the World Bank and Happiness datasets on Country and Year
+    # Selected all columns from World Bank plus key happiness metrics
+    # I inner joined both datasets on the Foreign Key from the world bank data of country and year on the 
+    # Primary Key of country and year from the happiness_index_data dataset. This ensured all the matching 
+    # I also selected all of the columns from both datasets, so that if I nedded any columns I could use it.
+    # I also placed rank before any of the world happiness index data for readability
+    query = """
+    SELECT 
+        h.Rank,
+        w.*,
+        h.Happiness_Score,
+        h.Social_support,
+        h.Freedom_to_make_life_choices,
+        h.Generosity,
+        h.Perceptions_of_corruption
+    FROM 
+        world_bank_data w
+    JOIN 
+        happiness_index_data h
+    ON 
+        w.Country = h.Country AND w.Year = h.Year;
+    """
+
+    # Loaded the cleaned dataset that merged World Bank and Happiness data
+    df = pd.read_sql_query(query, conn)
+    conn.close()
+
+    return df

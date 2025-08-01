@@ -1,7 +1,7 @@
 # Why Is the United States So Unhappy Compared to the Happiest Countries?
 
 This project investigates a persistent question:  
-**Why isn't the United States one of the happiest countries in the world, despite being one of the richest?**
+**Why is the U.S. consistently less happy than the happiest countries, and can economic indicators help explain this gap?**
 
 As part of my final project for [ME204: Data Engineering for the Social World](https://lse-dsi.github.io/ME204/2025/), I built a data pipeline, from collecting raw global datasets, to designing a relational database, to analyzing reasons behind the gap between the U.S. and the happiest countries of the world. The result is an analysis thats reproductible, and is contains both economic data and institutional indicators.
 
@@ -11,18 +11,18 @@ As part of my final project for [ME204: Data Engineering for the Social World](h
 ```
 project/
 ├── data/
-│ ├── processed/ ← Cleaned CSVs
-│ ├── raw/ ← Source files (CSV, JSON)
-│ └── database.db ← Final SQLite database
+│ ├── raw/ # Raw API responses (CSV/JSON)
+│ └── database.db # SQLite database
 ├── docs/
-│ ├── figures/ ← Output plots used in report
-│ └── index.md ← Project writeup for the public
+│ ├── figures/ # Output plots used in report
+│ ├── index_files/ # Created for Quarto Markdown
+│ └── index.md Public website
 ├── notebooks/
-│ ├── NB01-data-collection.ipynb
-│ ├── NB02-data-processing.ipynb
-│ └── NB03-analysis.ipynb
-├── scripts/ ← utils.py is here
-└── README.md ← This file
+│ ├── NB01-data-collection.ipynb # API data collection
+│ ├── NB02-data-processing.ipynb # Database design & ETL
+│ └── NB03-analysis.ipynb  # Exploratory analysis
+├── scripts/ # # Utility scripts
+└── README.md # For technical reproduction
 ```
 ---
 ## Setup Instructions
@@ -31,7 +31,7 @@ project/
 - Python 3.8+
 - Install these packages (or run in JupyterLab):
 ```bash
-pip install pandas matplotlib seaborn sqlalchemy
+pip install pandas matplotlib seaborn sqlalchemy plotly
 ```
 
 # How to Reproduce This Project
@@ -55,13 +55,13 @@ pip install pandas matplotlib seaborn sqlalchemy
 - Combined CSVs across all years  
 - Renamed columns to match and keep consistent 
 - Removed missing values and kept consistent country-year pairs  
-- Final output: `merged_happiness_2018_2023.csv`
+- Final output: a cleaned world_bank_data dataframe that is later converted into a dataset, and then into database.db
 
 ### World Bank JSON Cleaning
 - Converted JSON into dataframe format  
 - Converted country codes from the API to country names 
 - Rounded floats and formatted GDP as strings with commas  
-- Final output: `world_bank_data_cleaned.csv`
+- Final output: a cleaned happiness_index_data dataframe that is later converted into a dataset, and then into database.db
 
 ### SQLite Database
 - Built `database.db` with two tables:  
@@ -69,7 +69,7 @@ pip install pandas matplotlib seaborn sqlalchemy
   - `world_bank_indicators`: GDP, health, governance, etc.  
 - Both tables were linked by **country** and **year**
 
-**Output saved to:** `data/processed/` and `data/database.db`
+**Output saved to:** `data/database.db`
 
 ---
 
@@ -144,7 +144,7 @@ pip install pandas matplotlib seaborn sqlalchemy
 
 ---
 
-## ✅ How to Verify
+## How to Verify
 Run each notebook in order (**NB01 -> NB02 -> NB03**)
 
 Ensure that:

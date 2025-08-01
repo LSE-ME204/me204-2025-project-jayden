@@ -90,14 +90,15 @@ pip install pandas matplotlib seaborn sqlalchemy plotly
 
 ## Data Sources
 - **World Happiness Reports**  
-  [https://worldhappiness.report](https://worldhappiness.report)
+  [https://worldhappiness.report](https://www.worldhappiness.report/data-sharing/)
 - **Kaggle**  
-  [https://www.kaggle.com/unsdsn/world-happiness](https://www.kaggle.com/unsdsn/world-happiness)
+  [https://www.kaggle.com/datasets/njlow1202/world-happiness-report-data-2018](https://www.kaggle.com/datasets/njlow1202/world-happiness-report-data-2018)
+  [https://www.kaggle.com/datasets/anitaannah/world-happiness-report-2019](https://www.kaggle.com/datasets/anitaannah/world-happiness-report-2019)
 - **World Bank API**  
-  [https://data.worldbank.org](https://data.worldbank.org)  
+  [https://data.worldbank.org](https://datahelpdesk.worldbank.org/knowledgebase/topics/125589)  
   - Example indicator codes:  
-    - `NY.GDP.MKTP.CD` → GDP  
-    - `SP.DYN.LE00.IN` → Life Expectancy
+    - `NY.GDP.MKTP.CD` -> GDP  
+    - `SP.DYN.LE00.IN` -> Life Expectancy
 
 ---
 

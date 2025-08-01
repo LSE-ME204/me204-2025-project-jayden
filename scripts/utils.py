@@ -2,6 +2,7 @@
 # All indicators (economic + health + governance)
 # These indicators have different names in the World Bank API, so I renamed them in this dictionary
 # for readability purposes
+# I used the world bank open data catalog https://data.worldbank.org/indicator
 indicators = {
     'NY.GDP.MKTP.CD': 'GDP_Current_USD',
     'SH.XPD.CHEX.GD.ZS': 'Health_Expenditure_%_GDP',

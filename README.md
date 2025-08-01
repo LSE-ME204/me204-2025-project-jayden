@@ -3,7 +3,7 @@
 This project investigates a persistent question:  
 **Why is the U.S. consistently less happy than the happiest countries, and can economic indicators help explain this gap?**
 
-As part of my final project for [ME204: Data Engineering for the Social World](https://lse-dsi.github.io/ME204/2025/), I built a data pipeline, from collecting raw global datasets, to designing a relational database, to analyzing reasons behind the gap between the U.S. and the happiest countries of the world. The result is an analysis thats reproductible, and contains both economic data and institutional indicators.
+As part of my final project for [ME204: Data Engineering for the Social World](https://lse-dsi.github.io/ME204/2025/), I built a data pipeline, from collecting raw global datasets, to designing a relational database, to analyzing reasons behind the gap between the U.S. and the happiest countries of the world. The result is an analysis that's reproducible, and contains both economic data and institutional indicators.
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Why Is the U.S. So Unhappy?"
+title: "Why the U.S. Lags Behind the World’s Happiest Countries"
 format:
   html:
     theme: Zephyr
@@ -33,8 +33,8 @@ Using seven years of global survey data from the World Happiness Reports, and so
 ## What you will find in this website
 
 - [The U.S. Lags in Happiness, Despite Its Wealth](#the-u.s.-lags-in-happiness-despite-its-wealth)  
-- [Governance Could Predict Happiness Instead of GDP](#governance-could-predict-happiness-instead-of-gdp)
-- [The U.S. Governance Gap May Explain the Gap in Happiness](#the-u.s.-governance-gap-may-explain-the-gap-in-happiness)
+- [Governance Could Predict Happiness Instead of GDP](#what-moves-happiness-a-data-driven-exploration)
+- [The U.S. Governance Gap May Explain the Gap in Happiness](#where-america-falls-behind-governance-and-well-being)
 
 
 ---
@@ -131,7 +131,7 @@ These countries consistently appeared in all seven years of data and offer a con
 
 ## Data Collection and Processing
 
-To obtain the [World Bank indicators](https://datahelpdesk.worldbank.org/knowledgebase/topics/125589), I used the World Bank API to fetch up-to-date economic data for each country from 2018-2024. This automated data pull ensured the data is current and realiable allowing me to collect many indicators across multiple years without manual download or entry.
+To obtain the [World Bank indicators](https://datahelpdesk.worldbank.org/knowledgebase/topics/125589), I used the World Bank API to fetch up-to-date economic data for each country from 2018-2024. This automated data pull ensured the data is current and reliable allowing me to collect many indicators across multiple years without manual download or entry.
 
 I downloaded the [World Happiness Index Data](https://www.worldhappiness.report/data-sharing/) directly from the website via CSV's from 2020-2024. The data from 2018 and 2019 were downloaded from Kaggle, as it was not offered for download on the World Happiness Report Data Sharing site. However, to ensure validity, I cross referenced and checked every number to match up to the rankings both years on the [World Happiness Report rankings/data](https://data.worldhappiness.report/table), and they did, so I downloaded the csv's for [2018](https://www.kaggle.com/datasets/njlow1202/world-happiness-report-data-2018) and [2019](https://www.kaggle.com/datasets/anitaannah/world-happiness-report-2019).
 
@@ -152,18 +152,18 @@ Despite its high GDP, the U.S. placed **24th in 2024** in happiness, far behind 
 ![](./figures/happiness_over_time.svg){width=80%}
 
 More importantly, the **gap is growing**. The happiest countries continue to sustain or increase their well-being, while the U.S. has trended downward in the rankings in the past few years.
-Why is this occuring?
+Why is this occurring?
 
 ---
 
-## Governance Could Predict Happiness Instead of GDP
+## What Moves Happiness? A Data-Driven Exploration
 
-There are many reasons why this is occuring. I strived to find some data driven posibilites that can help explain this. 
+There are many reasons why this is occuring. I strived to find some data driven possibilities  that can help explain this. 
 To figure out what may help drives happiness, I calculated correlations between every World Bank indicator and happiness score across all countries and years to see which indicators and variables most correlate to happiness. 
 
 ![](./figures/correlation_with_happiness.svg){width=80%}
 
-A correlation coefficient ranges from -1 to +1. Values above 0.75 or below -0.75 are considered strong, meaning the variables move closely together. So the governance indicators with coefficients above 0.75 show a reliably strong link to happiness, and move wih it. 
+A correlation coefficient ranges from -1 to +1. Values above 0.75 or below -0.75 are considered strong, meaning the variables move closely together. So the governance indicators with coefficients above 0.75 show a reliably strong link to happiness, and move with it. 
 However, it is worth noting that correlation doesn’t equal causation. Just because two factors move together doesn’t mean one causes the other. For example, even though strong governance and happiness are closely linked, this doesn’t prove that good governance directly CAUSES happiness. Other factors are likely involved. Still, high correlations suggest a meaningful relationship worth exploring.
 
 The results show that the strongest correlations of happiness weren't economic, rather they were all about how well countries are governed:
@@ -176,7 +176,7 @@ The results show that the strongest correlations of happiness weren't economic, 
 
 The U.S. underperforms on these governance metrics relative to the happiest countries, which helps explain its lower happiness scores, and what may consistently predict happiness
 
-## The U.S. Governance Gap May Explain the Gap in Happiness
+## Where America Falls Behind: Governance and Well-Being
 
 To explore this further, use this interactive chart that lets you compare the average from 2018-2023 of happiness scores against any indicator score in the dataset to compare the United States to the happiest countries. You can switch the dropdown to governance metrics like Rule of Law or Voice and Accountability, and you’ll see a clear upward trend. Switch to economic metrics like GDP or Health Expenditure, and the pattern often disappears or reverses.
 
@@ -206,12 +206,12 @@ It may not be about making, spending, and having money. Happiness could pertain 
 
 ## Conclusion
 
-So to answer the original question 
+So to answer the original question:
 Why the U.S. far from the happiest, and can economic indicators explain this?
 
-It may not fully be about national income or spending. It could very well be about **governance** accorning to this data. The happiest countries in the world aren’t just economically successful, but they’re **well-governed, politically stable, and trusted by their citizens**.
+It may not fully be about national income or spending. It could very well be about **governance** according to this data. The happiest countries in the world aren’t just economically successful, but they’re **well-governed, politically stable, and trusted by their citizens**.
 
-If the U.S. wants to climn the happiness rankings, having a great GDP shouldn't just be the main focus. It will need to rebuild **public trust, institutional accountability, and effective governance**. The data displays how happiness could depend less on how much a country earns, and more on how fairly and effectively it is run.
+If the U.S. wants to climb the happiness rankings, having a great GDP shouldn't just be the main focus. It will need to rebuild **public trust, institutional accountability, and effective governance**. The data displays how happiness could depend less on how much a country earns, and more on how fairly and effectively it is run.
 
 This project shows how public datasets, when combined and analyzed thoughtfully, can reveal the deeper structures behind society's well-being.
 

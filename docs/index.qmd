@@ -147,7 +147,7 @@ The diagram below shows the pipeline I built to collect, process, and analyse th
 
 ## The U.S. Lags in Happiness, Despite Its Wealth
 
-Despite its high GDP, the U.S. placed **23rd in 2024** in happiness, far behind the top 5 happiest countries.
+Despite its high GDP, the U.S. placed **24th in 2024** in happiness, far behind the top 5 happiest countries.
 
 ![](./figures/happiness_over_time.svg){width=80%}
 

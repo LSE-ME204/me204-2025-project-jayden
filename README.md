@@ -3,7 +3,7 @@
 This project investigates a persistent question:  
 **Why is the U.S. consistently less happy than the happiest countries, and can economic indicators help explain this gap?**
 
-As part of my final project for [ME204: Data Engineering for the Social World](https://lse-dsi.github.io/ME204/2025/), I built a data pipeline, from collecting raw global datasets, to designing a relational database, to analyzing reasons behind the gap between the U.S. and the happiest countries of the world. The result is an analysis thats reproductible, and is contains both economic data and institutional indicators.
+As part of my final project for [ME204: Data Engineering for the Social World](https://lse-dsi.github.io/ME204/2025/), I built a data pipeline, from collecting raw global datasets, to designing a relational database, to analyzing reasons behind the gap between the U.S. and the happiest countries of the world. The result is an analysis thats reproductible, and contains both economic data and institutional indicators.
 
 ---
 
@@ -59,6 +59,7 @@ pip install pandas matplotlib seaborn sqlalchemy plotly
 - Final output: a cleaned world_bank_data dataframe that is later converted into a dataset, and then into database.db
 
 ### World Bank JSON Cleaning
+- No API key is needed. Data is collected using the World Bank's public endpoints.
 - Converted JSON into dataframe format  
 - Converted country codes from the API to country names 
 - Rounded floats and formatted GDP as strings with commas  

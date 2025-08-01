@@ -16,6 +16,7 @@ project/
 ├── docs/
 │ ├── figures/ # Output plots used in report
 │ ├── index_files/ # Created for Quarto Markdown
+│ ├── index.html # Ensures the quarto markdown runs
 │ └── index.md Public website
 ├── notebooks/
 │ ├── NB01-data-collection.ipynb # API data collection

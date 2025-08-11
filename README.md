@@ -5,6 +5,8 @@ This project investigates a persistent question:
 
 As part of my final project for [ME204: Data Engineering for the Social World](https://lse-dsi.github.io/ME204/2025/), I built a data pipeline, from collecting raw global datasets, to designing a relational database, to analyzing reasons behind the gap between the U.S. and the happiest countries of the world. The result is an analysis that's reproducible, and contains both economic data and institutional indicators.
 
+You can find the link of the website here: [https://lse-me204.github.io/me204-2025-project-jayden/](https://lse-me204.github.io/me204-2025-project-jayden/)
+
 ---
 
 ## Project Structure
